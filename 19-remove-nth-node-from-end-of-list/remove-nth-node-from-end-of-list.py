@@ -16,3 +16,7 @@ class Solution:
             right=right.next
         left.next=left.next.next
         return dummy.next
+
+        # In the above approach we use two pointer concept=, Here we move the right pointer n times a head of the left pointer so when right pointer reaches the end left pointer is eaxctly before the N the pointer from the end
+        # Time Complexity O(N)
+        # Space Comeplexity O(1)
