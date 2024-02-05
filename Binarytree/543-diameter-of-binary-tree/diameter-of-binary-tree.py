@@ -18,3 +18,5 @@ class Solution:
             return 1+max(left,right)
         dfs(root)
         return res[0]
+        # Time Complexity O(n)
+        # Space Complexity O(1)
