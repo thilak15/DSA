@@ -18,7 +18,7 @@ class Solution:
 
             return max(lh,rh)+1
         return check(root)!=-1
-    # Time Complexity O(n^2)
+    # Time Complexity O(n)
     # Space Complexity O(1)
         
         
