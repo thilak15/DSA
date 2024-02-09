@@ -7,7 +7,7 @@
 class Solution:
     def largestValues(self, root: Optional[TreeNode]) -> List[int]:
         # Using Queue Data Strucutre Which increases the space cmplexity by O(n)
-        if not root:
+        """if not root:
             return []
         max_values=[]
         queue=deque([root])
@@ -25,7 +25,25 @@ class Solution:
                     queue.append(node.right)
             max_values.append(level_max)
 
+        return max_values"""
+        # Time complexity O(n)
+        # lets optimize the space complexity by using recursion
+        max_values=[]
+
+        def dfs(node,level):
+            if not node:
+                return 
+            if level==len(max_values):
+                max_values.append(node.val)
+            else:
+                max_values[level]=max(max_values[level],node.val)
+            dfs(node.left,level+1)
+            dfs(node.right,level+1)
+        dfs(root,0)
+
         return max_values
         # Time complexity O(n)
+        # Space complexity O(1)
+
 
         
