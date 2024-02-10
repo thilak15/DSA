@@ -5,5 +5,5 @@ class Solution:
             if x in words[i]:
                 res.append(i)
         return res
-        # Time complexity O(N)
-        # Space complexity O(N)
+        # Time complexity O(n*m) (m:average lenght of the word)
+        # Space complexity O(n)
