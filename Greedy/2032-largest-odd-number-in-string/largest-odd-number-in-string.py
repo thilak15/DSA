@@ -16,3 +16,5 @@ class Solution:
             if int(num[i])%2!=0:
                 return num[:i+1]
         return ""
+        # Time Complexity O(n)
+        # Space Complexity O(1)
