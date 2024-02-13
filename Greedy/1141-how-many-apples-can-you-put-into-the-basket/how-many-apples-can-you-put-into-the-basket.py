@@ -11,3 +11,5 @@ class Solution:
                 return i
             i += 1
         return i 
+    # Time Complexity O(nlogn)
+    # Space Complexty O(1)
