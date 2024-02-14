@@ -11,7 +11,7 @@ class Solution:
         depth =1
         self.min_depth=float('inf')
         def dfs(node,depth):
-            if not node:
+            if depth>=self.min_depth or node is None:
                 return
             if node.left is None and node.right is None:
                 if depth<self.min_depth:
