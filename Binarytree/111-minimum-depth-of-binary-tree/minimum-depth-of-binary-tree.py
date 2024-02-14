@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def minDepth(self, root: Optional[TreeNode]) -> int:
-        if not root:
+        """if not root:
             return 0
         depth =1
         self.min_depth=float('inf')
@@ -19,5 +19,15 @@ class Solution:
             dfs(node.left,depth+1)
             dfs(node.right,depth+1)
         dfs(root,depth)
-        return self.min_depth
+        return self.min_depth"""
+        if not root:
+            return 0
+        def dfs(node):
+            if node is None:
+                return float('inf')
+            if node.left is None and node.right is None:
+                return 1
+            return min(dfs(node.left),dfs(node.right))+1
+        return dfs(root)
+
 
